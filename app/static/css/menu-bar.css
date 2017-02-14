@@ -1,0 +1,12 @@
+.navbar-default {
+    background-color: #fff !important;
+    border-color: #fff !important;
+}
+.dropdown:hover .dropdown-menu {
+   display: block;
+}
+
+nav {
+    text-transform: uppercase;
+    letter-spacing: 2px !important;
+}

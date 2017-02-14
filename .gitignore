@@ -1,0 +1,5 @@
+*.pyc
+app/*.pyc
+venv/
+*.db
+*.dump
