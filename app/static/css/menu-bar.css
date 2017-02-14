@@ -5,8 +5,18 @@
 .dropdown:hover .dropdown-menu {
    display: block;
 }
-
 nav {
     text-transform: uppercase;
     letter-spacing: 2px !important;
 }
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover,
+.dropdown-menu>li>a:hover,
+a.menu_link:hover {
+    background-color: rgba(85,255,157,.08);
+    border-bottom: 4px solid rgba(85,255,157,.8);
+    -webkit-transition: border-bottom .2s ease; 
+    transition: border-bottom .2s ease;
+}
+
+
