@@ -16,7 +16,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="menu_link" href="#">Home <span class="sr-only">(current)</span></a></li>
+            <li><a class="menu_link" href="{{ url_for('index') }}">Home <span class="sr-only">(current)</span></a></li>
             <li class="dropdown">
               <a class="menu_link" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -33,9 +33,9 @@
                 <li><a class="menu_link" href="#logos"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i>&nbsp; logos </a></li>
               </ul>
             </li>
-            <li><a class="menu_link" href="#">Portfolio</a></li>
-            <li><a class="menu_link" href="#">Team</a></li>
-            <li><a class="menu_link" href="#">Get in Touch</a></li>
+            <li><a class="menu_link" href="{{ url_for('portfolio') }}">Portfolio</a></li>
+            <li><a class="menu_link" href="{{ url_for('team') }}">Team</a></li>
+            <li><a class="menu_link" href="{{ url_for('contact') }}">Get in Touch</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
