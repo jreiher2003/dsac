@@ -2,12 +2,10 @@
     font-family: 'Raleway';
     letter-spacing: 1px;
 }
-
 .space {
     margin-top: 25px;
     padding-top:25px;
 }
-
 .firstcharacter {
   color: rgba(85,255,157,.8);
   float: left;
@@ -41,6 +39,9 @@
 .fa-border {
     border: solid .08em rgba(85,255,157,.4) !important;
 }
+.border-blue {
+  border:solid .08em rgba(72,255,253,.4) !important;
+}
 a i.fa.fa-facebook.fa-border, 
 a i.fa.fa-twitter.fa-border,
 a i.fa.fa-linkedin.fa-border {
@@ -52,4 +53,36 @@ i.fa.fa-twitter.fa-border:hover,
 i.fa.fa-linkedin.fa-border:hover {
     background-color: #fff !important;
     color: rgba(85,255,157,.8) !important;
+}
+/*contact page*/
+.contact_btn, .contact_h1 {
+  background-color: rgba(85,255,157,.2) !important;
+  border: solid .08em rgba(85,255,157,.7) !important;
+}
+.contact_h1 {
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 30px;
+  font-weight: 300px !important;
+
+}
+.well {
+  padding: 20px 40px !important;
+}
+.alert-success {
+  color:rgba(115,121,121,1);
+  background-color:rgba(72,255,253,.2);
+  border-color:rgba(72,255,253,.7);
+}
+/*team*/
+.team-text {
+    font-size: 16px;
+    line-height: 200%;
+    letter-spacing: 1.5px;
+}
+.team_role {
+  font-size: 12px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
 }

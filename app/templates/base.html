@@ -13,34 +13,61 @@
   <link rel="stylesheet" href="static/css/style.css">
   <link rel="stylesheet" href="static/css/menu-bar.css">
   <link rel="icon" type="image/png" href="static/images/favicon.png">
+  <title>Sea Turtle</title>
+  <style type="text/css">
+  {% block style %}
+  .logo {
+    border: solid .6em rgba(85,255,157,.4);
+    /*border: solid .8em rgba(72,255,253,.4);*/
+    /*padding: .2em .25em .15em;*/
+    border-radius: .1em;
+}
+  {% endblock %}
+  </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
   {% include "menu-bar.html" %}
   {% block content %}
   {% endblock %}
+  {% include "footer.html" %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-   $(window).scroll(function () {
-          if ($(this).scrollTop() > 100) {
-              $('#back-to-top').fadeIn();
-          } else {
-              $('#back-to-top').fadeOut();
-          }
-      });
-      // scroll body to 0px on click
-      $('#back-to-top').click(function () {
-          $('#back-to-top').tooltip('hide');
-          $('body,html').animate({
-              scrollTop: 0
-          }, 800);
-          return false;
-      });
-      $('#back-to-top').tooltip('show');
+<script>
+$('a[href*="#"]:not([href="#"])').click(function() {
+  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    if (target.length) {
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
 });
 </script>
+<script>
+$(document).ready(function(){
+   $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+          $('#back-to-top').fadeIn();
+      } else {
+          $('#back-to-top').fadeOut();
+      }
+  });
+  // scroll body to 0px on click
+  $('#back-to-top').click(function () {
+      $('#back-to-top').tooltip('hide');
+      $('body,html').animate({
+          scrollTop: 0
+      }, 800);
+      return false;
+  });
+  $('#back-to-top').tooltip('show');
+});
+</script>
+
 </body>
 </html>

@@ -2,6 +2,12 @@
     background-color: #fff !important;
     border-color: #fff !important;
 }
+.navbar-header {
+    float:none !important;
+    display:inline-block !important;
+    vertical-align:middle !important;
+    margin-right:-4px !important;
+}
 .dropdown:hover .dropdown-menu {
    display: block;
 }
@@ -18,5 +24,7 @@ a.menu_link:hover {
     -webkit-transition: border-bottom .2s ease; 
     transition: border-bottom .2s ease;
 }
+/*comp blue to the site green
+rgba(72,255,253,1)*/
 
 

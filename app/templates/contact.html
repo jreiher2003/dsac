@@ -1,4 +1,48 @@
 {% extends "base.html" %}
 {% block content %}
-contact
+{% from "_macro.html" import render_field_with_errors, render_field %}
+<div class="container">
+  <div class="row">
+    <h1 class="text-center text-muted contact_h1">Get In Touch</h1>
+    {% include "flash_messages.html" %}
+  </div>
+</div>
+<div class="space"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>We Want to Hear From You!</h1>
+      <div class="space"></div>
+      <h3>Lets start a Conversation</h3>
+      <ul>
+        <li class="service-text">Need a quote?</li>
+        <li class="service-text">Want to talk about an million dollar buinsess idea?</li>
+        <li class="service-text">Want to get some idea about what is even possible?</li>
+        <li class="service-text">Just wanta talk about code?</li>
+      </ul>
+      <div class="space"></div>
+      <h3>Give us a call or send a message. Go ahead we want you to!</h3>
+    </div>
+    <div class="col-md-6">
+      <div class="well">
+        <h3 class="text-center" style="margin-top:0;">Contact SeaTurtle Web</h3>
+        <form method="post" action="" class="form-horizontal">
+          {{ form.csrf_token }}
+          <div class="form-group">
+            {{ render_field_with_errors(form.name,class="form-control", placeholder="Whats your name?") }}
+          </div>
+          <div class="form-group">
+            {{ render_field_with_errors(form.email,class="form-control", placeholder="We need your email so we can respond") }}
+          </div>
+          <div class="form-group">
+            {{ render_field_with_errors(form.textarea,class="form-control", rows=5, placeholder="Start a conversation with us.  We love to hear from you!") }}
+          </div>
+          <div class="form-group">
+            {{ form.submit(class="btn btn-block contact_btn") }}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

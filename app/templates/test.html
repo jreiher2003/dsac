@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block style %}
+
+.logo {
+    outline: solid .1em rgba(85,255,157,.4);
+    border: solid .8em rgba(72,255,253,.4);
+    padding: .2em .25em .15em;
+    border-radius: .1em;
+}
+
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="logo_div">
+                <div class="logo_text">
+                    <h4 class="h4_logo_text">Sea Turtle Web Development</h4>
+                    <img class="logo" src="https://placehold.it/350x120">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="logo_div">
+                <div class="logo_text">
+                    <h4 class="h4_logo_text">Sea Turtle Web Development</h4>
+                    <img class="logo" style="border-radius:50%;" src="https://placehold.it/100x100">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
